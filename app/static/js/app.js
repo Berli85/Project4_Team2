@@ -1,3 +1,6 @@
+import "bootswatch/dist/minty/bootstrap.min.css";
+// TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com/ for current theme names.)
+
 // select the dropdown
 let houseType_dropdown = d3.select("#houseType_dropdown");
 let price_filter = d3.select("#price_filter");
