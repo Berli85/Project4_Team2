@@ -22,9 +22,9 @@ def home():
 def wine_characteristics():
     return render_template("wine_characteristics.html")
 
-@app.route("/around_the_world")
-def around_the_world():
-    return render_template("around_the_world.html")
+@app.route("/wine_ml")
+def wine_ml():
+    return render_template("wine_ml.html")
 
 @app.route("/about_us")
 def works_cited():
@@ -46,12 +46,23 @@ def make_predictions():
     print(content)
 
     # parse
-    boardgame_name = content["boardgame_name"]
-    min_rating = int(content["min_rating"])
-    max_owners = int(content["max_owners"])
+    fixed_acidity = float(content["fixed_acidity"])
+    volatile_acidity = float(content["volatile_acidity"])
+    citric_acid = float(content["citric_acid"])
+    residual_sugar = float(content["residual_sugar"])
+    chlorides = float(content["chlorides"])
+    free_sulfur_dioxide = float(content["free_sulfur_dioxide"])
+    total_sulfur_dioxide = float(content["total_sulfur_dioxide"])
+    density = float(content["density"])
+    pH = float(content["pH"])
+    sulphates = float(content["sulphates"])
+    alcohol = float(content["alcohol"])
     
-    preds = modelHelper.makePredictions(boardgame_name, min_rating, max_owners)
-    return(jsonify({"ok": True, "prediction":preds}))
+    preds = modelHelper.makePredictions(fixed_acidity, volatile_acidity, citric_acid, 
+                    residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density,
+                   pH, sulphates, alcohol)
+    print(preds)
+    return(jsonify({"ok": True, "prediction": preds}))
 
 #############################################################
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Wine ML</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Wine ML</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="wine_characteristics">Wine Characteristics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="wine_ml">Wine Predictor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="works_cited">Works Cited</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="write_up">Write-Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navigation bar -->
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Filters</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <form id="filterForm">
+                    <div class="mb-3">
+                        <label for="fixed_acidity" class="form-label">Fixed Acidity</label>
+                        <input type="text" class="form-control" id="fixed_acidity" value="7.00">
+                    </div>
+                    <div class="mb-3">
+                        <label for="volatile_acidity" class="form-label">Volatile Acidity</label>
+                        <input type="text" class="form-control" id="volatile_acidity" value="0.70">
+                    </div>
+                    <div class="mb-3">
+                        <label for="citric_acid" class="form-label">Citric Acid</label>
+                        <input type="text" class="form-control" id="citric_acid" value="0.00">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <form id="filterForm">
+                    <div class="mb-3">
+                        <label for="residual_sugar" class="form-label">Residual Sugar</label>
+                        <input type="text" class="form-control" id="residual_sugar" value="5.00">
+                    </div>
+                    <div class="mb-3">
+                        <label for="chlorides" class="form-label">Chlorides</label>
+                        <input type="text" class="form-control" id="chlorides" value="0.075">
+                    </div>
+                    <div class="mb-3">
+                        <label for="free_sulfur_dioxide" class="form-label">Free SO2</label>
+                        <input type="text" class="form-control" id="free_sulfur_dioxide" value="15.00">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <form id="filterForm">
+                    <div class="mb-3">
+                        <label for="total_sulfur_dioxide" class="form-label">Total SO2</label>
+                        <input type="text" class="form-control" id="total_sulfur_dioxide" value="40.00">
+                    </div>
+                    <div class="mb-3">
+                        <label for="density" class="form-label">Density</label>
+                        <input type="text" class="form-control" id="density" value="0.95">
+                    </div>
+                    <div class="mb-3">
+                        <label for="pH" class="form-label">pH</label>
+                        <input type="text" class="form-control" id="pH" value="3.00">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form id="filterForm">
+                    <div class="mb-3">
+                        <label for="sulphates" class="form-label">Sulphates</label>
+                        <input type="text" class="form-control" id="sulphates" value="0.50">
+                    </div>
+                    <div class="mb-3">
+                        <label for="alcohol" class="form-label">Alcohol</label>
+                        <input type="text" class="form-control" id="alcohol" value="9.50">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="filter">Find my wine of preference!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Output Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 id="output"></h2>
+            </div>
+        </div>
+    </div>
+    <!-- End Output Section -->
+
+    <!-- Bootstrap JS and Custom JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="static/js/logic.js"></script>
+</body>
+</html>
