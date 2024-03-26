@@ -8,5 +8,5 @@ Folders are organized as follows:
 4) presentation, report, and proposal contain the files as titled
 
    
-Overall team 2 found that the XGBClassifier utilizing the SMOTE sampled dataset as the best model for predicting wine types. The features that had the most correlation for determining wine quality was alcohol, density, volatile acidity, and chlorides. Prediciting wine type seemed to be the better approach compared to quality since it has higher correlations based on total sulfur dioxide, volatile acidity, and cholorides.
+Overall team 2 found that the XGBClassifier utilizing the SMOTE sampled dataset as the best model for predicting wine types. The features that had the most correlation for determining wine quality were alcohol, density, volatile acidity, and chlorides. Prediciting wine type seemed to be the better approach compared to quality since it had higher correlations based on total sulfur dioxide, volatile acidity, and cholorides.
 
